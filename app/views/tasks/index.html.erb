@@ -2,19 +2,20 @@
 
 <ul>
  
- <% @tasks.each do |task| %>
+<% @tasks.each do |task| %>
  
- <li>
+  <li>
  
- <%= link_to task.id,task %>
-  :
- <%= task.content %>
- 
+<%= link_to task.id,task %>
+:
+<%= task.status %>
+ &gt;
+<%= task.content %>
  </li>
  
  <% end %>
  
- </ul>
+</ul>
  
- <%= link_to '新規タスクの登録', new_task_path %>
+<%= link_to '新規タスクの登録', new_task_path %>
  
