@@ -22,7 +22,7 @@ class TasksController < ApplicationController
    flash[:success] = 'Taskが正常に登録されました'
    redirect_to root_url
   else
-   @task = current_user.tasks.order('created_at DESC').page(params[:page])
+   @tasks = current_user.tasks.order('created_at DESC').page(params[:page])
    flash.now[:danger] = 'Taskが登録されませんでした'
    render :new
   end
